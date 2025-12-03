@@ -18,27 +18,27 @@ console.log("Bienvenue dans " + shopName + " située à " + city);
 console.log("Slogan :", slogan);
 
 if (isOpen) {
-  console.log("La boutique est ouverte.");
+    console.log("La boutique est ouverte.");
 } else {
-  console.log("La boutique est fermée.");
+    console.log("La boutique est fermée.");
 }
 
 // Mise à jour d'un élément de tagline (si présent dans la page)
 const taglineElement = document.querySelector(".site-tagline");
 if (taglineElement) {
-  taglineElement.textContent = `Bienvenue dans ${shopName} à ${city} 👋`;
+    taglineElement.textContent = `Bienvenue dans ${shopName} à ${city} 👋`;
 }
 
 // Année dans le footer (si span#year présent)
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
+    yearSpan.textContent = new Date().getFullYear();
 }
 
 /* Exercice 2 - Chaînes de caractères & messages */
 
 let welcomeMessage =
-  "Bienvenue dans " + shopName + " située à " + city + " !";
+    "Bienvenue dans " + shopName + " située à " + city + " !";
 
 let welcomeMessage2 = `Bienvenue dans ${shopName} à ${city} !`;
 
@@ -55,8 +55,8 @@ console.log("Slogan modifié :", sloganModified);
 // Utilisation du slogan modifié dans un éventuel message de panier
 const cartMessageElementEx2 = document.getElementById("cart-message");
 if (cartMessageElementEx2) {
-  cartMessageElementEx2.textContent =
-    sloganModified + ` (${sloganLength} caractères dans le slogan original)`;
+    cartMessageElementEx2.textContent =
+        sloganModified + ` (${sloganLength} caractères dans le slogan original)`;
 }
 
 /* Exercice 3 - Nombres & calculs */
@@ -76,11 +76,11 @@ console.log("Nombre de ventes après incrémentation :", salesCount);
 /* Exercice 4 - Fonctions de prix */
 
 function calculatePriceTTC(priceHT) {
-  return priceHT + priceHT * TVA;
+    return priceHT + priceHT * TVA;
 }
 
 function formatPrice(price) {
-  return price.toFixed(2) + " €";
+    return price.toFixed(2) + " €";
 }
 
 // Tests simples
@@ -104,39 +104,39 @@ const productList = document.getElementById("product-list");
 
 // 3) Fonction de création de la carte produit
 function createFeaturedProductCard() {
-  const article = document.createElement("article");
-  article.classList.add("product-card");
+    const article = document.createElement("article");
+    article.classList.add("product-card");
 
-  const img = document.createElement("img");
-  img.src = featuredProductImage;
-  img.alt = featuredProductName;
-  img.classList.add("product-image");
+    const img = document.createElement("img");
+    img.src = featuredProductImage;
+    img.alt = featuredProductName;
+    img.classList.add("product-image");
 
-  const title = document.createElement("h3");
-  title.textContent = featuredProductName;
-  title.classList.add("product-title");
+    const title = document.createElement("h3");
+    title.textContent = featuredProductName;
+    title.classList.add("product-title");
 
-  const priceElt = document.createElement("p");
-  const priceTTC = calculatePriceTTC(featuredProductPriceHT);
-  priceElt.textContent = formatPrice(priceTTC);
-  priceElt.classList.add("product-price");
+    const priceElt = document.createElement("p");
+    const priceTTC = calculatePriceTTC(featuredProductPriceHT);
+    priceElt.textContent = formatPrice(priceTTC);
+    priceElt.classList.add("product-price");
 
-  const desc = document.createElement("p");
-  desc.textContent = featuredProductDescription;
-  desc.classList.add("product-description");
+    const desc = document.createElement("p");
+    desc.textContent = featuredProductDescription;
+    desc.classList.add("product-description");
 
-  article.appendChild(img);
-  article.appendChild(title);
-  article.appendChild(priceElt);
-  article.appendChild(desc);
+    article.appendChild(img);
+    article.appendChild(title);
+    article.appendChild(priceElt);
+    article.appendChild(desc);
 
-  return article;
+    return article;
 }
 
 // 4) Affichage du produit vedette dans la page
-  productList.innerHTML = "";
-  const card = createFeaturedProductCard();
-  productList.appendChild(card);
+productList.innerHTML = "";
+const card = createFeaturedProductCard();
+productList.appendChild(card);
 
 console.log("Exercice 5 chargé ✅");
 
@@ -145,22 +145,31 @@ console.log("Exercice 5 chargé ✅");
 // Nouveauté Exo6
 
 // - créer tableau (productNames)
-let productNames = ["pen","pencile","inkpen"];
+let productNames = ["pen", "pencile", "inkpen"];
 console.log(productNames);
 // - créer tableau (productPricesHT)
 let productPricesHT = [5, 3, 14];
 // - afficher dans la console la longueur du tableau (le nombre d'éléments à l'intérieur)
 console.log(productNames.length);
 // - définir fonction (afficherProduitsConsole()):
-function afficherProduitsConsole(){
-//   - `Pour chaque nom dans mon tableau productNames:`
-//     (indice : il faudra récupérer l'index de chaque nom en plus. Donc on doit récupérer 2 informations.)
- productNames.forEach(element, index => {
-    });
-//       - récupérer prix HT via `prixHT[index]`
+function afficherProduitsConsole() {
+    //   - `Pour chaque nom dans mon tableau productNames:`
+    //     (indice : il faudra récupérer l'index de chaque nom en plus. Donc on doit récupérer 2 informations.)
+    
+    
+    productNames.forEach(element, index => {
+        // modification ici
 
-//       - calculer le prix TTC (avec une fonction créée plus tôt dans nos exercices)
-//       - formatter prix (avec une fonction créée plus tôt dans nos exercices)
-//       - afficher dans la console la phrase : "Produit : Nom — Prix : XX,XX €"
-// - appeler la fonction
+
+
+
+    });
+
+    
+    //       - récupérer prix HT via `prixHT[index]`
+
+    //       - calculer le prix TTC (avec une fonction créée plus tôt dans nos exercices)
+    //       - formatter prix (avec une fonction créée plus tôt dans nos exercices)
+    //       - afficher dans la console la phrase : "Produit : Nom — Prix : XX,XX €"
+    // - appeler la fonction
 }
