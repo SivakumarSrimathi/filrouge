@@ -147,29 +147,72 @@ console.log("Exercice 5 chargé ✅");
 // - créer tableau (productNames)
 let productNames = ["pen", "pencile", "inkpen"];
 console.log(productNames);
+
 // - créer tableau (productPricesHT)
 let productPricesHT = [5, 3, 14];
+
 // - afficher dans la console la longueur du tableau (le nombre d'éléments à l'intérieur)
 console.log(productNames.length);
+
 // - définir fonction (afficherProduitsConsole()):
 function afficherProduitsConsole() {
+
     //   - `Pour chaque nom dans mon tableau productNames:`
     //     (indice : il faudra récupérer l'index de chaque nom en plus. Donc on doit récupérer 2 informations.)
     
-    
-    productNames.forEach(element, index => {
-        // modification ici
+    productNames.forEach((element, index) => {
+        // - récupérer prix HT via `prixHT[index]`
+        let priceHT = productPricesHT[index];
+ //       - calculer le prix TTC (avec une fonction créée plus tôt dans nos exercices)
+        let priceTTC = calculatePriceTTC(priceHT);
+//       - formatter prix (avec une fonction créée plus tôt dans nos exercices)
+        let formattedPrice = formatPrice(priceTTC);
 
+          //       - afficher dans la console la phrase : "Produit : Nom — Prix : XX,XX €"
+    // - appeler la fonction
 
-
+        console.log("Nom :" +element +" price :"+formattedPrice);
 
     });
+//    console.log(`produit:${index+1}-nom:${element}- prix:${formattedPrice}TTC`);
 
-    
-    //       - récupérer prix HT via `prixHT[index]`
+}
+afficherProduitsConsole();
 
-    //       - calculer le prix TTC (avec une fonction créée plus tôt dans nos exercices)
-    //       - formatter prix (avec une fonction créée plus tôt dans nos exercices)
-    //       - afficher dans la console la phrase : "Produit : Nom — Prix : XX,XX €"
-    // - appeler la fonction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function test(){
+    let name = "SriMeow";
+    let age = 22;
+
+
+    // a utiliser plus tard
 }

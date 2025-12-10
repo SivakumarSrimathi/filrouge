@@ -116,11 +116,11 @@ article.appendChild(paragraphe1);
 //     • retourne ce conteneur
 return article;
 }
+productList.innerHTML = "";
 
 createFeaturedProductCard();
 // - Avant d’afficher la carte, vider ce qu’il y a déjà dans la section
 //   (indice : il existe une propriété qui permet de supprimer tout le contenu HTML d’un élément)
-productList.innerHTML = "";
 // - Appeler la fonction pour créer la carte
 
 // - Ajouter le résultat dans la section prévue
